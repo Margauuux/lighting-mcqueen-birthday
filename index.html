@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightning McQueen Birthday Greeting</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1518893490601-0a9f20b7dfc7') no-repeat center center fixed; /* Example racing background */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .content {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FFC107;
+            text-shadow: 2px 2px #000;
+        }
+
+        .editable {
+            border: 2px dashed #ff3535;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            cursor: text;
+            margin: 20px auto;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff3535;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #d32c2c;
+        }
+
+        .car-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Ka-Chow! 🏎️ Happy Birthday!</h1>
+        <div class="editable" id="main-message" contenteditable="true">
+            Hi there! Wishing you the best Lightning McQueen-style birthday! 🚗💨
+        </div>
+
+        <img class="car-image" src="https://upload.wikimedia.org/wikipedia/en/7/7f/Lightning_McQueen.png" alt="Lighting McQueen">
+
+        <div class="btn-container">
+            <button onclick="sendMessage()">Send Personalized Greeting</button>
+        </div>
+    </div>
+
+    <script>
+        /** Function to send the editable message */
+        function sendMessage() {
+            const message = document.getElementById('main-message').innerText;
+            alert(`Your message has been sent!\n\nMessage: ${message}`);
+        }
+    </script>
+</body>
+</html>
